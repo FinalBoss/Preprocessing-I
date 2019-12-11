@@ -1,4 +1,3 @@
-@main-font: "Bebas Neue";
 
 // Is this working?
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -52,63 +51,268 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
+	
 }
 
-header {
-	border-bottom: 1px solid black;
-	margin: 20px 0;
-	padding: 20px 0;
-	display: flex;
-	justify-content: space-between;
-	@media( max-width: 515px ) {
-	  flex-direction: column;
-	  align-items: center;
-	} // this closes my header media query 
-	h1 {
-	  font-size: 2rem;
-	  @media( max-width: 515px ) {
-		margin-bottom: 20px;
+//visual settings
+@media (max-width: 1000px){
 
-		font-family: @main-font;
 
-	  }// this closes the media query 
-	} // this closes the h1
-	nav {
-	  margin-left: 62px;
-	  @media( max-width: 515px ) {
-		margin-left: 0;
-	  }// this closes the media query
-	 a {
-		margin-left: 20px;
-		font-size: 1.8rem;
-	  }// this closes the links 
-	}//this closes the nav
-  }//this closes the header
+	@media (max-width: 500px){
+	
+		.header-visuals{
+			   
+			 {
+				flex-direction: column;
+			}
+			
 
-html {
-
-	font-size: 62.6%;
-	.border-main();
-}
-
-html, body {
-    height: 100%;
-
-	@media (max-width: 600px) {
-		
-
-		font-size: 1.6 rem;
+		}
+	
+	}
 
 	}
 
+//variables
+
+//------font
+
+//-----------size
+@default-font-size: 62.5%;
+//------------------family 
+@h1-font: 'Bebas Neue';
+@h2-font: 'Girassol';
+@p-font: 'Oxygen';
+
+
+//-----------Max-width: Desktop, Tablet, Mobile
+
+@desktop: 1000px;
+@tablet: 800px;
+@mobile: 500px;
+
+//-------------Max Dimensions
+
+@maxdim: 100%;
+
+//---------------content flow
+
+//center
+
+.centerflow {
+
+	align-items: center;
+
+  }
+
+  //left
+
+  .leftflow {
+
+	align-items: left;
+
+  }
+
+  //right
+
+  .rightflow {
+
+	align-items: right;
+
+  }
+
+
+  .header-visuals {
+
+	.flex-row();
+	.centerflow(); 
+	border-bottom: 1px solid green;
+	margin: 20px 0;
+	padding: 20px 0;
+	justify-content: space-between;
+	color: black;
+
+	
+	
+}
+
+h1 {
+
+	font-size: xx-large;
+}
+
+ nav a {
+		
+	font-size: large;
+		text-decoration: none;
+		color: black;
+		padding: 1.2rem;
+	}
+
+
+
+//default mixins
+
+//-----default visuals
+
+.main-visuals {
+
+border: 2px dotted green;
+font-size: @default-font-size;
+color: white;
+
+h1 {
+
+	font-size: 4rem;
+	font-family: @h1-font;
+
+}
+
+h2 {
+
+	font-size: 3rem;
+	font-family: @h2-font;
+
+}
+
+p {
+
+	font-size: 2rem;
+	font-family: @p-font;
+
+}
+
+ul {
+
+	 list-style: disc;
+	font-size: 1.5rem;
+
+}
+
+//---------------------------Body
+
+div {
+
+.flex-col;
+padding: 3rem;
+
+
+section {
+
+.flex-row();
+padding: 3rem;
+
+
+
+article{
+
+margin: 3rem;
+.centerflow();
+
+p, h2 {
+
+padding: 2rem;
+}
+
+h2 {
+
+text-align: center;
+}
+
+}
+
+}
+
 }
 
 
-.border-main {
 
-border: 2px dotted black;
+
+
+
+
+
+
+
+
+//----------------------html
+
+//background
+
+ #bg {
+	
+	background-color: black;
+	border: 2px solid grey;
+	padding: 5rem;
+	background-repeat: no-repeat;
+	background-size:  @maxdim @maxdim;
+
+	
+}
+
+section {
+
+	border: 1px solid green;
+	background-color: grey;
+
+}
+
+//flex properties
+
+.flex-row {
+
+	display: flex;
+	justify-content: space-evenly;
+
 
 
 }
+
+.flex-col {
+
+	display: flex;
+	flex-direction: column;
+
+}
+
+
+
+
+  //----------------Header
+
+
+
+
+//Main code
+
+html {
+
+.main-visuals();
+
+
+
+body {
+
+
+
+header {
+
+	.header-visuals();
+	
+
+}
+
+}
+
+}
+
+
+
+
+
+
+
+
+
 
