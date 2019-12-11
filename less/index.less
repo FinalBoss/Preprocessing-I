@@ -1,3 +1,5 @@
+@main-font: "Bebas Neue";
+
 // Is this working?
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -53,7 +55,60 @@ table {
     box-sizing: border-box;
 }
 
+header {
+	border-bottom: 1px solid black;
+	margin: 20px 0;
+	padding: 20px 0;
+	display: flex;
+	justify-content: space-between;
+	@media( max-width: 515px ) {
+	  flex-direction: column;
+	  align-items: center;
+	} // this closes my header media query 
+	h1 {
+	  font-size: 2rem;
+	  @media( max-width: 515px ) {
+		margin-bottom: 20px;
+
+		font-family: @main-font;
+
+	  }// this closes the media query 
+	} // this closes the h1
+	nav {
+	  margin-left: 62px;
+	  @media( max-width: 515px ) {
+		margin-left: 0;
+	  }// this closes the media query
+	 a {
+		margin-left: 20px;
+		font-size: 1.8rem;
+	  }// this closes the links 
+	}//this closes the nav
+  }//this closes the header
+
+html {
+
+	font-size: 62.6%;
+	.border-main();
+}
+
 html, body {
     height: 100%;
+
+	@media (max-width: 600px) {
+		
+
+		font-size: 1.6 rem;
+
+	}
+
+}
+
+
+.border-main {
+
+border: 2px dotted black;
+
+
 }
 
