@@ -1,1 +1,161 @@
-/* Compile your LESS file! */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  max-width: 100%;
+}
+.fontdefault h1 {
+  font-size: 4rem;
+  font-family: "Bebas Nueue";
+  text-align: center;
+  margin: 5rem;
+}
+.fontdefault h2 {
+  font-size: 2.5rem;
+  font-family: "Bebas Nueue";
+  color: orange;
+  background-color: darkred;
+}
+.fontdefault p,
+.fontdefault ul {
+  font-size: 1.6rem;
+  font-family: "Girassol";
+}
+.fontdefault a {
+  text-decoration: none;
+  font-size: 2rem;
+}
+.fontdefault h1,
+.fontdefault p,
+.fontdefault a,
+.fontdefault ul {
+  color: white;
+}
+.fontdefault .edu {
+  text-decoration: underline red;
+  font-weight: bolder;
+}
+.fontdefault nav {
+  display: flex;
+  align-items: center;
+  margin-right: 15rem;
+  padding: 0;
+}
+table {
+  font-family: "Bebas Nueue";
+  border-collapse: collapse;
+  width: 100%;
+}
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  font-size: 2rem;
+}
+td {
+  color: white;
+}
+tr {
+  background-color: red;
+}
+#thead {
+  background-color: white;
+}
+.contain {
+  margin: 5rem;
+  display: flex;
+}
+.bg {
+  background-image: url(img/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.headercont {
+  display: flex;
+  align-content: center;
+}
+div {
+  align-items: center;
+  align-content: center;
+}
+section {
+  margin: 4rem;
+}
+article {
+  background-color: grey;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.flexrow {
+  display: flex;
+}
+.flexcol {
+  display: flex;
+  flex-direction: column;
+}
+body {
+  background-image: url(img/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+body h1 {
+  font-size: 4rem;
+  font-family: "Bebas Nueue";
+  text-align: center;
+  margin: 5rem;
+}
+body h2 {
+  font-size: 2.5rem;
+  font-family: "Bebas Nueue";
+  color: orange;
+  background-color: darkred;
+}
+body p,
+body ul {
+  font-size: 1.6rem;
+  font-family: "Girassol";
+}
+body a {
+  text-decoration: none;
+  font-size: 2rem;
+}
+body h1,
+body p,
+body a,
+body ul {
+  color: white;
+}
+body .edu {
+  text-decoration: underline red;
+  font-weight: bolder;
+}
+body nav {
+  display: flex;
+  align-items: center;
+  margin-right: 15rem;
+  padding: 0;
+}
+@media (max-width: 1000px) {
+}
+@media (max-width: 1000px) and (max-width: 500px) {
+  * {
+    margin: 0;
+    padding: 0;
+    margin-left: 0;
+  }
+  .headercont {
+    margin-right: 35rem;
+  }
+}
