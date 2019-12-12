@@ -1,256 +1,161 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+* {
   margin: 0;
   padding: 0;
   border: 0;
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  max-width: 100%;
 }
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
+.fontdefault h1 {
+  font-size: 4rem;
+  font-family: "Bebas Nueue";
+  text-align: center;
+  margin: 5rem;
 }
-body {
-  line-height: 1;
+.fontdefault h2 {
+  font-size: 2.5rem;
+  font-family: "Bebas Nueue";
+  color: orange;
+  background-color: darkred;
 }
-ol,
-ul {
-  list-style: none;
+.fontdefault p,
+.fontdefault ul {
+  font-size: 1.6rem;
+  font-family: "Girassol";
 }
-blockquote,
-q {
-  quotes: none;
+.fontdefault a {
+  text-decoration: none;
+  font-size: 2rem;
 }
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: '';
-  content: none;
+.fontdefault h1,
+.fontdefault p,
+.fontdefault a,
+.fontdefault ul {
+  color: white;
+}
+.fontdefault .edu {
+  text-decoration: underline red;
+  font-weight: bolder;
+}
+.fontdefault nav {
+  display: flex;
+  align-items: center;
+  margin-right: 15rem;
+  padding: 0;
 }
 table {
+  font-family: "Bebas Nueue";
   border-collapse: collapse;
-  border-spacing: 0;
-}
-/* Set every element's box-sizing to border-box */
-* {
-  box-sizing: border-box;
-}
-.centerflow {
-  align-items: center;
-}
-.leftflow {
-  align-items: left;
-}
-.rightflow {
-  align-items: right;
-}
-.main-visuals {
   width: 100%;
-  height: 100%;
-  border: 2px dotted green;
-  font-size: 62.5%;
+}
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  font-size: 2rem;
+}
+td {
   color: white;
 }
-.main-visuals h1 {
-  font-size: 4rem;
-  font-family: 'Bebas Neue';
+tr {
+  background-color: red;
 }
-.main-visuals h2 {
-  font-size: 3rem;
-  font-family: 'Girassol';
+#thead {
+  background-color: white;
 }
-.main-visuals p {
-  font-size: 2rem;
-  font-family: 'Oxygen';
-}
-.main-visuals ul {
-  list-style: disc;
-  font-size: 1.5rem;
-}
-#bg {
-  background-color: black;
-  border: 2px solid grey;
-  padding: 5rem;
-  padding-bottom: 100%;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
-section {
-  border: 1px solid green;
-  background-color: grey;
-}
-.flex-row {
+.contain {
+  margin: 5rem;
   display: flex;
-  justify-content: space-evenly;
 }
-.flex-col {
+.bg {
+  background-image: url(img/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+header {
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+.headercont {
+  display: flex;
+  align-content: center;
 }
 div {
+  align-items: center;
+  align-content: center;
+}
+section {
+  margin: 4rem;
+}
+article {
+  background-color: grey;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.flexrow {
+  display: flex;
+}
+.flexcol {
   display: flex;
   flex-direction: column;
 }
-div section {
-  display: flex;
-  justify-content: space-evenly;
-  padding: 3rem;
+body {
+  background-image: url(img/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.5);
 }
-div section article {
-  margin: 2rem;
-  align-items: center;
-}
-div section article p,
-div section article h2 {
-  padding: 2rem;
-}
-div section article h2 {
+body h1 {
+  font-size: 4rem;
+  font-family: "Bebas Nueue";
   text-align: center;
+  margin: 5rem;
 }
-.header-visuals {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  border-bottom: 1px solid green;
-  margin: 20px 0;
-  padding: 20px 0;
-  justify-content: space-between;
-  color: black;
+body h2 {
+  font-size: 2.5rem;
+  font-family: "Bebas Nueue";
+  color: orange;
+  background-color: darkred;
 }
-h1 {
-  font-size: xx-large;
+body p,
+body ul {
+  font-size: 1.6rem;
+  font-family: "Girassol";
 }
-nav a {
-  font-size: large;
+body a {
   text-decoration: none;
-  color: black;
-  padding: 1.2rem;
+  font-size: 2rem;
 }
-html {
-  width: 100%;
-  height: 100%;
-  border: 2px dotted green;
-  font-size: 62.5%;
+body h1,
+body p,
+body a,
+body ul {
   color: white;
 }
-html h1 {
-  font-size: 4rem;
-  font-family: 'Bebas Neue';
+body .edu {
+  text-decoration: underline red;
+  font-weight: bolder;
 }
-html h2 {
-  font-size: 3rem;
-  font-family: 'Girassol';
-}
-html p {
-  font-size: 2rem;
-  font-family: 'Oxygen';
-}
-html ul {
-  list-style: disc;
-  font-size: 1.5rem;
-}
-html body header {
+body nav {
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
-  border-bottom: 1px solid green;
-  margin: 20px 0;
-  padding: 20px 0;
-  justify-content: space-between;
-  color: black;
+  margin-right: 15rem;
+  padding: 0;
+}
+@media (max-width: 1000px) {
+}
+@media (max-width: 1000px) and (max-width: 500px) {
+  * {
+    margin: 0;
+    padding: 0;
+    margin-left: 0;
+  }
+  .headercont {
+    margin-right: 35rem;
+  }
 }

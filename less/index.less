@@ -1,317 +1,239 @@
-
-// Is this working?
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-/* Set every element's box-sizing to border-box */
 * {
-	box-sizing: border-box;
-	
-}
 
-//visual settings
-@media (max-width: 1000px){
-
-
-	@media (max-width: 500px){
-	
-		.header-visuals{
-			   
-			 {
-				flex-direction: column;
-			}
-			
-
-		}
-	
-	}
-
-	}
-
-//variables
-
-//------font
-
-//-----------size
-@default-font-size: 62.5%;
-//------------------family 
-@h1-font: 'Bebas Neue';
-@h2-font: 'Girassol';
-@p-font: 'Oxygen';
-
-
-//-----------Max-width: Desktop, Tablet, Mobile
-
-@desktop: 1000px;
-@tablet: 800px;
-@mobile: 500px;
-
-//-------------Max Dimensions
-
-@maxdim: 100%;
-
-//---------------content flow
-
-//center
-
-.centerflow {
-
-	align-items: center;
-
-  }
-
-  //left
-
-  .leftflow {
-
-	align-items: left;
-
-  }
-
-  //right
-
-  .rightflow {
-
-	align-items: right;
-
-  }
-
-
-  .header-visuals {
-
-	.flex-row();
-	.centerflow(); 
-	border-bottom: 1px solid green;
-	margin: 20px 0;
-	padding: 20px 0;
-	justify-content: space-between;
-	color: black;
-
-	
-	
-}
-
-h1 {
-
-	font-size: xx-large;
-}
-
- nav a {
-		
-	font-size: large;
-		text-decoration: none;
-		color: black;
-		padding: 1.2rem;
-	}
-
-
-
-//default mixins
-
-//-----default visuals
-
-.main-visuals {
-
-border: 2px dotted green;
-font-size: @default-font-size;
-color: white;
-
-h1 {
-
-	font-size: 4rem;
-	font-family: @h1-font;
+    margin: 0;  
+padding: 0;  
+border: 0;  
+font-size: 100%;  
+font: inherit;  
+vertical-align: baseline;  
+max-width: 100%;
 
 }
+
+ //Font Family Variables
+
+ @hfont: "Bebas Nueue";
+ @pfont: "Girassol";
+
+ //Special Variable
+
+ @opacity: rgba(0,0,0,.5);
+
+ //Assign font settings----------
+
+ .fontdefault {
+
+
+
+ h1 {
+
+    font-size: 4rem;
+    font-family: @hfont;
+    text-align: center;
+    margin: 5rem;
+
+
+ }
 
 h2 {
 
-	font-size: 3rem;
-	font-family: @h2-font;
+    font-size: 2.5rem;
+    font-family: @hfont;
+    color: orange;
+    background-color: darkred;
 
 }
 
-p {
+ p, ul {
+     font-size: 1.6rem;
+    font-family: @pfont;
 
-	font-size: 2rem;
-	font-family: @p-font;
 
+
+
+ }
+
+    a{
+        
+        text-decoration: none;
+        font-size: 2rem;
+    
+
+    }
+
+    h1, p, a, ul {
+
+        color: white;
+        
+    }
+
+    .edu {
+
+        text-decoration: underline red;
+        font-weight: bolder;
+    }
+
+    nav {
+
+        display: flex;
+        align-items: center;
+        margin-right: 15rem;
+        padding: 0;
+
+    }
 }
 
-ul {
-
-	 list-style: disc;
-	font-size: 1.5rem;
-
-}
-
-//---------------------------Body
-
-div {
-
-.flex-col;
-padding: 3rem;
-
-
-section {
-
-.flex-row();
-padding: 3rem;
-
-
-
-article{
-
-margin: 3rem;
-.centerflow();
-
-p, h2 {
-
-padding: 2rem;
-}
-
-h2 {
-
-text-align: center;
-}
-
-}
-
-}
-
-}
-
-
-
-
-
-
-
-
-
-
-
-//----------------------html
-
-//background
-
- #bg {
-	
-	background-color: black;
-	border: 2px solid grey;
-	padding: 5rem;
-	background-repeat: no-repeat;
-	background-size:  @maxdim @maxdim;
-
-	
-}
-
-section {
-
-	border: 1px solid green;
-	background-color: grey;
-
-}
-
-//flex properties
-
-.flex-row {
-
-	display: flex;
-	justify-content: space-evenly;
-
+table {
+    font-family: @hfont;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    font-size: 2rem;
 
 
 }
 
-.flex-col {
+  td {
 
-	display: flex;
-	flex-direction: column;
+    color: white;
+  }
+  
+  tr {
+    
+    background-color: red;
+  }
+  
+  #thead {
+  background-color: white;
+  
+  }
 
+.contain {
+  
+
+    margin:  5rem;
+   .flexrow();
+
+
+
+   
 }
 
+.bg {
+  
+    background-image: url(img/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: @opacity;
 
-
-
-  //----------------Header
-
-
-
-
-//Main code
-
-html {
-
-.main-visuals();
-
-
-
-body {
-
-
+}
 
 header {
 
-	.header-visuals();
-	
+    .flexcol();
+    align-items: center;
+   
 
 }
 
+
+.headercont {
+
+display: flex;
+align-content: center;
+
+
 }
 
+div{
+
+    align-items: center;
+    align-content: center;
+    
 }
 
 
 
+section {
+
+ 
+    margin: 4rem;
+    
+
+}
+
+article {
+
+    background-color: grey;
+    background-color: @opacity;
+}
+
+//DesktopBuild
+
+
+.flexrow {
+
+
+display: flex;
 
 
 
+}
+
+//MobileBuild
+
+.flexcol {
+
+display: flex;
+flex-direction: column;
+
+}
+
+//Main CSS
+body {
+
+    .fontdefault();
+    .bg();
+ 
+
+    
+
+}
+
+
+    @media (max-width: 1000px){
+
+//Mobile
+
+@media (max-width: 500px){
+
+
+* {
+
+    
+    margin:0;
+    padding: 0;
+    margin-left: 0;
+  
+}
+
+
+
+.headercont {
+
+
+    margin-right: 35rem;
+
+}
+}
+}
+    
 
 
 
